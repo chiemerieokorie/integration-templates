@@ -7,6 +7,7 @@ interface GithubIssueRaw {
     body: string | null;
     state: string;
     html_url: string;
+    user: { id: number; login: string } | null;
     assignee: { id: number; login: string } | null;
     labels: { id: number; name: string }[];
     created_at: string;
@@ -21,6 +22,7 @@ export function toStandardTask(issue: GithubIssueRaw, owner: string, repo: strin
         status: issue.state === 'closed' ? 'DONE' : 'TODO',
         priority: 'NONE',
         assigneeId: issue.assignee ? issue.assignee.id.toString() : null,
+        creatorId: issue.user ? issue.user.id.toString() : null,
         projectId: `${owner}/${repo}`,
         labels: issue.labels.map((l) => l.name),
         dueDate: null,

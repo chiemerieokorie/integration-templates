@@ -27,6 +27,7 @@ export function toStandardTask(issue: JiraIssueResponse, baseUrl: string): Stand
         status: mapStatus(issue.fields.status.statusCategory.key),
         priority: mapPriority(issue.fields.priority?.name),
         assigneeId: issue.fields.assignee?.accountId ?? null,
+        creatorId: issue.fields.reporter?.accountId ?? null,
         projectId: issue.fields.project.id,
         labels: issue.fields.labels ?? [],
         dueDate: issue.fields.duedate ? new Date(issue.fields.duedate).toISOString() : null,
@@ -35,8 +36,7 @@ export function toStandardTask(issue: JiraIssueResponse, baseUrl: string): Stand
             key: issue.key,
             issueType: issue.fields.issuetype.name,
             projectKey: issue.fields.project.key,
-            projectName: issue.fields.project.name,
-            reporterAccountId: issue.fields.reporter.accountId
+            projectName: issue.fields.project.name
         },
         createdAt: new Date(issue.fields.created).toISOString(),
         updatedAt: new Date(issue.fields.updated).toISOString()

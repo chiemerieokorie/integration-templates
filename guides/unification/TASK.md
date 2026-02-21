@@ -13,6 +13,7 @@ interface StandardTask {
     status: 'TODO' | 'IN_PROGRESS' | 'DONE' | 'CANCELLED';
     priority: 'URGENT' | 'HIGH' | 'MEDIUM' | 'LOW' | 'NONE';
     assigneeId: string | null;
+    creatorId: string | null;
     projectId: string | null;
     labels: string[];
     dueDate: string | null;   // ISO date string
@@ -31,6 +32,7 @@ interface StandardTask {
 
 - **`status`**: Normalized from each provider's status system. Defaults to `TODO` when mapping is ambiguous.
 - **`priority`**: Linear is the only provider with native priority. Asana and GitHub always return `NONE`. Jira maps from its priority name field.
+- **`creatorId`**: The user ID of whoever opened the task. Linear: `creator.id`; Jira: `reporter.accountId`; GitHub: `user.id`; Asana: `created_by.gid`. May be `null` if not available.
 - **`dueDate`**: Not supported by GitHub Issues — always `null`.
 - **`projectId`**: For GitHub, this is `owner/repo` (e.g. `"acme/backend"`).
 - **`labels`**: GitHub and Jira have native labels; Linear maps label names; Asana maps tag names.
@@ -133,6 +135,7 @@ Group: Unified Task API
     status: "IN_PROGRESS",
     priority: "HIGH",
     assigneeId: "user_456",
+    creatorId: "user_123",
     projectId: "proj_789",
     labels: ["bug", "auth"],
     dueDate: "2026-03-01T00:00:00.000Z",
@@ -159,6 +162,7 @@ Group: Unified Task API
     status: "TODO",
     priority: "NONE",
     assigneeId: "9876543210987654",
+    creatorId: "1234567890123456",
     projectId: "1111111111111111",
     labels: ["reporting", "q1"],
     dueDate: "2026-03-31T00:00:00.000Z",
@@ -186,6 +190,7 @@ Group: Unified Task API
     status: "TODO",
     priority: "HIGH",
     assigneeId: "5b10ac8d82e05b22cc7d4ef5",
+    creatorId: "5b10ac8d82e05b22cc7d4ef6",
     projectId: "10001",
     labels: ["infrastructure", "database"],
     dueDate: null,
@@ -194,8 +199,7 @@ Group: Unified Task API
         key: "INFRA-42",
         issueType: "Task",
         projectKey: "INFRA",
-        projectName: "Infrastructure",
-        reporterAccountId: "5b10ac8d82e05b22cc7d4ef6"
+        projectName: "Infrastructure"
     },
     createdAt: "2026-01-10T08:00:00.000Z",
     updatedAt: "2026-02-01T16:00:00.000Z"
@@ -212,6 +216,7 @@ Group: Unified Task API
     status: "TODO",
     priority: "NONE",
     assigneeId: "1234567",
+    creatorId: "7654321",
     projectId: "acme/backend",
     labels: ["enhancement", "security"],
     dueDate: null,

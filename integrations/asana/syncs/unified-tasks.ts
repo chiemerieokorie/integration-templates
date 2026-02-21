@@ -57,7 +57,8 @@ const sync = createSync({
                                 'assignee_status',
                                 'tags.name',
                                 'num_likes',
-                                'workspace.gid'
+                                'workspace.gid',
+                                'created_by.gid'
                             ].join(',')
                         };
 

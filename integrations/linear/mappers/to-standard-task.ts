@@ -27,6 +27,7 @@ export function toStandardTask(issue: LinearIssueResponse & { priority?: number;
         status: mapStatus(issue.state.name),
         priority: mapPriority(issue.priority ?? 0),
         assigneeId: issue.assignee?.id ?? null,
+        creatorId: issue.creator?.id ?? null,
         projectId: issue.project?.id ?? null,
         labels: issue.labels?.nodes.map((l) => l.name) ?? [],
         dueDate: issue.dueDate ? new Date(issue.dueDate).toISOString() : null,

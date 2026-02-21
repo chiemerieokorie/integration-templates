@@ -158,6 +158,7 @@ export const StandardTask = z.object({
   status: z.enum(['TODO', 'IN_PROGRESS', 'DONE', 'CANCELLED']),
   priority: z.enum(['URGENT', 'HIGH', 'MEDIUM', 'LOW', 'NONE']),
   assigneeId: z.string().nullable(),
+  creatorId: z.string().nullable(),
   projectId: z.string().nullable(),
   labels: z.array(z.string()),
   dueDate: z.string().nullable(),
