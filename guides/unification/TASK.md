@@ -2,6 +2,8 @@
 
 This document describes the unified task model used across project management integrations (Linear, Asana, Jira, GitHub). All providers map to the same `StandardTask` model, ensuring consistent data regardless of source.
 
+> **Note:** `StandardTask` is an **intermediate model** provided by these templates as a starting point. It is not designed to be used directly as your application's domain model. Before exposing this data to your product, map `StandardTask` to your own internal task or ticket model — one that reflects your application's field names, required constraints, and business logic. Using your own model ensures consistency across your codebase and avoids coupling your application to Nango's generic schema.
+
 ## Standardized Task Model
 
 ```typescript

@@ -13,8 +13,8 @@ export const StandardTask = z.object({
     dueDate: z.string().nullable(),
     url: z.string(),
     providerSpecific: z.object({}).catchall(z.any()),
-    createdAt: z.string(),
-    updatedAt: z.string()
+    createdAt: z.string().nullable(),
+    updatedAt: z.string().nullable()
 });
 
 export type StandardTask = z.infer<typeof StandardTask>;

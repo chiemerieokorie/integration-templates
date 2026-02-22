@@ -22,7 +22,7 @@ export function toStandardTask(task: AsanaTask, projectId: string | null): Stand
             numLikes: task.num_likes,
             workspaceId: task.workspace.gid
         },
-        createdAt: task.created_at ?? new Date().toISOString(),
-        updatedAt: task.modified_at ?? new Date().toISOString()
+        createdAt: task.created_at ?? null,
+        updatedAt: task.modified_at ?? null
     };
 }

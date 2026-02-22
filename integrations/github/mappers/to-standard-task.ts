@@ -1,18 +1,5 @@
 import type { StandardTask } from '../models.js';
-
-interface GithubIssueRaw {
-    id: number;
-    number: number;
-    title: string;
-    body: string | null;
-    state: string;
-    html_url: string;
-    user: { id: number; login: string } | null;
-    assignee: { id: number; login: string } | null;
-    labels: { id: number; name: string }[];
-    created_at: string;
-    updated_at: string;
-}
+import type { GithubIssueRaw } from '../types.js';
 
 export function toStandardTask(issue: GithubIssueRaw, owner: string, repo: string): StandardTask {
     return {

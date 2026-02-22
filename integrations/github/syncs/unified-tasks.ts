@@ -2,6 +2,7 @@ import { createSync } from 'nango';
 import type { ProxyConfiguration } from 'nango';
 import { toStandardTask } from '../mappers/to-standard-task.js';
 import { StandardTask } from '../models.js';
+import type { GithubRepoRaw, GithubIssueRaw } from '../types.js';
 import { z } from 'zod';
 
 const LIMIT = 100;
@@ -30,7 +31,7 @@ const sync = createSync({
     metadata: z.object({}),
 
     exec: async (nango) => {
-        const repos: any[] = await getAllRepositories(nango);
+        const repos: GithubRepoRaw[] = await getAllRepositories(nango);
 
         for (const repo of repos) {
             const params: Record<string, string | number> = { limit: LIMIT, state: 'all' };
@@ -46,9 +47,9 @@ const sync = createSync({
                 paginate: { limit: LIMIT }
             };
 
-            for await (const issueBatch of nango.paginate(proxyConfig)) {
-                const issues: any[] = issueBatch.filter((issue: any) => !('pull_request' in issue));
-                const mappedTasks = issues.map((issue: any) => toStandardTask(issue, repo.owner.login, repo.name));
+            for await (const issueBatch of nango.paginate<GithubIssueRaw>(proxyConfig)) {
+                const issues = issueBatch.filter((issue) => !('pull_request' in issue));
+                const mappedTasks = issues.map((issue) => toStandardTask(issue, repo.owner.login, repo.name));
 
                 if (mappedTasks.length > 0) {
                     await nango.batchSave(mappedTasks, 'StandardTask');
@@ -61,15 +62,15 @@ const sync = createSync({
 export type NangoSyncLocal = Parameters<(typeof sync)['exec']>[0];
 export default sync;
 
-async function getAllRepositories(nango: NangoSyncLocal) {
-    const records: any[] = [];
+async function getAllRepositories(nango: NangoSyncLocal): Promise<GithubRepoRaw[]> {
+    const records: GithubRepoRaw[] = [];
     const proxyConfig: ProxyConfiguration = {
         // https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#list-repositories-for-the-authenticated-user
         endpoint: '/user/repos',
         paginate: { limit: LIMIT }
     };
 
-    for await (const recordBatch of nango.paginate(proxyConfig)) {
+    for await (const recordBatch of nango.paginate<GithubRepoRaw>(proxyConfig)) {
         records.push(...recordBatch);
     }
 
