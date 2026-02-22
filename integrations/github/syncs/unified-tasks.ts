@@ -40,6 +40,7 @@ const sync = createSync({
             }
 
             const proxyConfig: ProxyConfiguration = {
+                // https://docs.github.com/en/rest/issues/issues?apiVersion=2022-11-28#list-repository-issues
                 endpoint: `/repos/${repo.owner.login}/${repo.name}/issues`,
                 params,
                 paginate: { limit: LIMIT }

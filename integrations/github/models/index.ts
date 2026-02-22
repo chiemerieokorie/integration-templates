@@ -4,12 +4,14 @@ export type { GithubIssue as GithubIssueType, Issue as IssueType, GithubIssueRep
 export { GithubRepoFile } from './github-repo-file.js';
 export type { GithubRepoFile as GithubRepoFileType } from './github-repo-file.js';
 
-export { Repo, WriteFileInput, WriteFileOutput, GithubWriteFileActionResult } from './github-repo.js';
+export { Repo, WriteFileInput, WriteFileOutput, GithubWriteFileActionResult, GithubWriteFileInput, GithubRepo } from './github-repo.js';
 export type {
     Repo as RepoType,
     WriteFileInput as WriteFileInputType,
     WriteFileOutput as WriteFileOutputType,
-    GithubWriteFileActionResult as GithubWriteFileActionResultType
+    GithubWriteFileActionResult as GithubWriteFileActionResultType,
+    GithubWriteFileInput as GithubWriteFileInputType,
+    GithubRepo as GithubRepoType
 } from './github-repo.js';
 
 export { GithubMilestone } from './github-milestone.js';
@@ -38,7 +40,7 @@ export type { StandardLabel as StandardLabelType } from './standard-label.js';
 
 import { GithubIssue, Issue, GithubIssueRepoInput } from './github-issue.js';
 import { GithubRepoFile } from './github-repo-file.js';
-import { Repo, WriteFileInput, WriteFileOutput, GithubWriteFileActionResult } from './github-repo.js';
+import { Repo, WriteFileInput, WriteFileOutput, GithubWriteFileActionResult, GithubWriteFileInput, GithubRepo } from './github-repo.js';
 import { GithubMilestone } from './github-milestone.js';
 import { GithubLabel } from './github-label.js';
 import { GithubUser } from './github-user.js';
@@ -57,6 +59,8 @@ export const models = {
     WriteFileInput,
     WriteFileOutput,
     GithubWriteFileActionResult,
+    GithubWriteFileInput,
+    GithubRepo,
     GithubMilestone,
     GithubLabel,
     GithubUser,

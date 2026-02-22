@@ -39,3 +39,10 @@ export const GithubWriteFileActionResult = z.object({
 });
 
 export type GithubWriteFileActionResult = z.infer<typeof GithubWriteFileActionResult>;
+
+// Aliases used by existing actions
+export const GithubWriteFileInput = WriteFileInput;
+export type GithubWriteFileInput = WriteFileInput;
+
+export const GithubRepo = z.object({ repos: Repo.array() });
+export type GithubRepo = z.infer<typeof GithubRepo>;

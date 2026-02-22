@@ -33,9 +33,7 @@ const sync = createSync({
 
         // eslint-disable-next-line @nangohq/custom-integrations-linting/no-while-true
         while (true) {
-            const filterParam = lastSyncDate
-                ? `, filter: { updatedAt: { gte: "${lastSyncDate.toISOString()}" } }`
-                : '';
+            const filterParam = lastSyncDate ? `, filter: { updatedAt: { gte: "${lastSyncDate.toISOString()}" } }` : '';
 
             const afterParam = after ? `, after: "${after}"` : '';
 
@@ -64,8 +62,7 @@ const sync = createSync({
                 retries: 10
             });
 
-            const nodes: (LinearIssueResponse & { priority?: number; labels?: { nodes: { name: string }[] } })[] =
-                response.data.data.issues.nodes;
+            const nodes: (LinearIssueResponse & { priority?: number; labels?: { nodes: { name: string }[] } })[] = response.data.data.issues.nodes;
 
             await nango.batchSave(nodes.map(toStandardTask), 'StandardTask');
 

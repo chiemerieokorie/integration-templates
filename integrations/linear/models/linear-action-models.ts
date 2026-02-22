@@ -6,12 +6,7 @@ export const Entity = z.object({
 
 export type Entity = z.infer<typeof Entity>;
 
-export const Field = z.object({}).catchall(
-    z.union([
-        z.string(),
-        z.record(z.string(), z.string())
-    ])
-);
+export const Field = z.object({}).catchall(z.union([z.string(), z.record(z.string(), z.string())]));
 export type Field = z.infer<typeof Field>;
 
 export const FieldResponse = z.object({

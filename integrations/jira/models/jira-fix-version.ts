@@ -6,7 +6,7 @@ export const JiraFixVersion = z.object({
     description: z.string().optional(),
     archived: z.boolean(),
     released: z.boolean(),
-    startDate: z.string().optional(),   // ISO date
+    startDate: z.string().optional(), // ISO date
     releaseDate: z.string().optional(), // ISO date
     projectId: z.string()
 });

@@ -1,40 +1,18 @@
 // Jira provider models
-export { Timestamps, Author, Comment, Issue } from './jira-issue.js';
-export type { Timestamps, Author, Comment, Issue } from './jira-issue.js';
-
-export { Project } from './jira-project.js';
-export type { Project } from './jira-project.js';
-
-export { JiraProjectId, JiraIssueMetadata, IssueType, CreateIssueInput, CreateIssueOutput } from './jira-issue-type.js';
-export type { JiraProjectId, JiraIssueMetadata, IssueType, CreateIssueInput, CreateIssueOutput } from './jira-issue-type.js';
-
-export { JiraFixVersion } from './jira-fix-version.js';
-export type { JiraFixVersion } from './jira-fix-version.js';
-
-export { JiraSprint } from './jira-sprint.js';
-export type { JiraSprint } from './jira-sprint.js';
+export * from './jira-issue.js';
+export * from './jira-project.js';
+export * from './jira-issue-type.js';
+export * from './jira-fix-version.js';
+export * from './jira-sprint.js';
 
 // Standard unified models
-export { StandardTask } from './standard-task.js';
-export type { StandardTask } from './standard-task.js';
-
-export { StandardProject } from './standard-project.js';
-export type { StandardProject } from './standard-project.js';
-
-export { StandardTeam } from './standard-team.js';
-export type { StandardTeam } from './standard-team.js';
-
-export { StandardUser } from './standard-user.js';
-export type { StandardUser } from './standard-user.js';
-
-export { StandardMilestone } from './standard-milestone.js';
-export type { StandardMilestone } from './standard-milestone.js';
-
-export { StandardCycle } from './standard-cycle.js';
-export type { StandardCycle } from './standard-cycle.js';
-
-export { StandardComment } from './standard-comment.js';
-export type { StandardComment } from './standard-comment.js';
+export * from './standard-task.js';
+export * from './standard-project.js';
+export * from './standard-team.js';
+export * from './standard-user.js';
+export * from './standard-milestone.js';
+export * from './standard-cycle.js';
+export * from './standard-comment.js';
 
 // Models registry
 import { Timestamps, Author, Comment, Issue } from './jira-issue.js';

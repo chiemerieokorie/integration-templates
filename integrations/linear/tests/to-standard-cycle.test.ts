@@ -2,12 +2,11 @@ import { describe, it, expect } from 'vitest';
 import { toStandardCycle } from '../mappers/to-standard-cycle.js';
 import type { LinearCycle } from '../models/index.js';
 
-// Fixed reference point: 2024-06-15T12:00:00.000Z
-// Past: before this, Future: after this
+// Dates relative to 2026-02-22 (current date)
 const PAST_DATE = '2024-01-01T00:00:00.000Z';
-const NEAR_PAST_DATE = '2024-06-01T00:00:00.000Z';
-const NEAR_FUTURE_DATE = '2024-12-31T23:59:59.000Z';
-const FAR_FUTURE_DATE = '2025-06-01T00:00:00.000Z';
+const NEAR_PAST_DATE = '2026-01-01T00:00:00.000Z';
+const NEAR_FUTURE_DATE = '2027-12-31T23:59:59.000Z';
+const FAR_FUTURE_DATE = '2028-06-01T00:00:00.000Z';
 
 function makeCycle(overrides: Partial<LinearCycle> = {}): LinearCycle {
     return {
@@ -36,7 +35,7 @@ describe('toStandardCycle', () => {
     it('maps to PLANNED when startsAt is in the future', () => {
         const cycle = makeCycle({
             startsAt: FAR_FUTURE_DATE,
-            endsAt: '2026-01-01T00:00:00.000Z',
+            endsAt: '2029-01-01T00:00:00.000Z',
             completedAt: null
         });
         const result = toStandardCycle(cycle);

@@ -3,9 +3,12 @@ import type { JiraIssueResponse } from '../types.js';
 
 function mapStatus(statusCategoryKey: string): StandardTask['status'] {
     switch (statusCategoryKey) {
-        case 'done': return 'DONE';
-        case 'indeterminate': return 'IN_PROGRESS';
-        default: return 'TODO';
+        case 'done':
+            return 'DONE';
+        case 'indeterminate':
+            return 'IN_PROGRESS';
+        default:
+            return 'TODO';
     }
 }
 

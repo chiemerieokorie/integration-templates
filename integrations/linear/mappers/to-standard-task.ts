@@ -11,11 +11,16 @@ function mapStatus(stateName: string): StandardTask['status'] {
 
 function mapPriority(priority: number): StandardTask['priority'] {
     switch (priority) {
-        case 1: return 'URGENT';
-        case 2: return 'HIGH';
-        case 3: return 'MEDIUM';
-        case 4: return 'LOW';
-        default: return 'NONE';
+        case 1:
+            return 'URGENT';
+        case 2:
+            return 'HIGH';
+        case 3:
+            return 'MEDIUM';
+        case 4:
+            return 'LOW';
+        default:
+            return 'NONE';
     }
 }
 
