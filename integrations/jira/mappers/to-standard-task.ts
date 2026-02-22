@@ -3,7 +3,7 @@ import type { JiraIssueResponse, AtlassianDocument } from '../types.js';
 
 function extractTextFromAdf(node: AtlassianDocument | null): string | null {
     if (!node) return null;
-    function walk(n: { type?: string; text?: string; content?: typeof n[] }): string {
+    function walk(n: { type?: string; text?: string; content?: (typeof n)[] }): string {
         if (n.type === 'text' && typeof n.text === 'string') return n.text;
         if (Array.isArray(n.content)) return n.content.map(walk).join('');
         return '';
