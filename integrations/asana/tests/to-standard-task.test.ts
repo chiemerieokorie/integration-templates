@@ -83,7 +83,13 @@ describe('toStandardTask', () => {
     });
 
     it('maps tags array to labels', () => {
-        const task = makeTask({ tags: ['tag-1', 'tag-2', 'tag-3'] });
+        const task = makeTask({
+            tags: [
+                { gid: 'tag-gid-1', name: 'tag-1' },
+                { gid: 'tag-gid-2', name: 'tag-2' },
+                { gid: 'tag-gid-3', name: 'tag-3' }
+            ]
+        });
         const result = toStandardTask(task, 'proj-gid-1');
         expect(result.labels).toStrictEqual(['tag-1', 'tag-2', 'tag-3']);
     });

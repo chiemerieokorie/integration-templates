@@ -4,8 +4,6 @@ This document defines the unified milestone model across project management inte
 
 Related concept: [CYCLE.md](./CYCLE.md) covers time-boxed recurring iterations (sprints/cycles), which are distinct.
 
-Schema.org basis: [schema:Event](https://schema.org/Event) (a named moment in a project's lifecycle).
-
 ## Standardized Milestone Model
 
 ```typescript

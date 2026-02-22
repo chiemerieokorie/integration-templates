@@ -10,7 +10,7 @@ export const AsanaTask = z.object({
     modified_at: z.union([z.string(), z.null()]),
     completed: z.boolean(),
     due_date: z.union([z.string(), z.null()]),
-    tags: z.string().array(),
+    tags: z.array(z.object({ gid: z.string(), name: z.string() })),
     start_on: z.union([z.string(), z.null()]),
     due_at: z.union([z.string(), z.null()]),
     due_on: z.union([z.string(), z.null()]),

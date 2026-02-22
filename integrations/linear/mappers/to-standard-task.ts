@@ -36,7 +36,7 @@ export function toStandardTask(issue: LinearIssueResponse & { priority?: number;
         projectId: issue.project?.id ?? null,
         labels: issue.labels?.nodes.map((l) => l.name) ?? [],
         dueDate: issue.dueDate ? new Date(issue.dueDate).toISOString() : null,
-        url: `https://linear.app/issue/${issue.id}`,
+        url: issue.url ?? `https://linear.app/issue/${issue.id}`,
         providerSpecific: {
             teamId: issue.team.id,
             stateId: issue.state.id,

@@ -2,8 +2,6 @@
 
 This document defines the unified project model used across project management integrations (Linear, Asana, Jira, GitHub). A "project" represents a container that groups tasks toward a shared goal, with optional timeline and ownership information.
 
-Schema.org basis: [schema:Project](https://schema.org/Project) and [schema:CreativeWork](https://schema.org/CreativeWork).
-
 ## Standardized Project Model
 
 ```typescript

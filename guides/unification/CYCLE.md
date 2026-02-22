@@ -4,8 +4,6 @@ This document defines the unified cycle model across project management integrat
 
 Cycles are distinct from milestones (see [MILESTONE.md](./MILESTONE.md)): milestones are fixed checkpoints tied to goals, while cycles are repeating time boxes tied to a team's delivery rhythm.
 
-Schema.org basis: [schema:Event](https://schema.org/Event) with a recurrence/sequence nature.
-
 ## Standardized Cycle Model
 
 ```typescript

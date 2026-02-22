@@ -9,7 +9,6 @@ function mapStatus(version: JiraFixVersion): StandardMilestone['status'] {
 }
 
 export function toStandardMilestone(version: JiraFixVersion, createdAt?: string, updatedAt?: string): StandardMilestone {
-    const now = new Date().toISOString();
     return {
         id: version.id,
         name: version.name,
@@ -24,7 +23,7 @@ export function toStandardMilestone(version: JiraFixVersion, createdAt?: string,
             released: version.released,
             archived: version.archived
         },
-        createdAt: createdAt ?? now,
-        updatedAt: updatedAt ?? now
+        createdAt: createdAt ?? null,
+        updatedAt: updatedAt ?? null
     };
 }

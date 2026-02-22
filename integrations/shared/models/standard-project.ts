@@ -11,8 +11,8 @@ export const StandardProject = z.object({
     teamId: z.string().nullable(),
     url: z.string().nullable(),
     providerSpecific: z.object({}).catchall(z.any()),
-    createdAt: z.string(),
-    updatedAt: z.string()
+    createdAt: z.string().nullable(),
+    updatedAt: z.string().nullable()
 });
 
 export type StandardProject = z.infer<typeof StandardProject>;

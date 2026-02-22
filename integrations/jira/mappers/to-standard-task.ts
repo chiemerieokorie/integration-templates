@@ -1,16 +1,6 @@
 import type { StandardTask } from '../models.js';
-import type { JiraIssueResponse, AtlassianDocument } from '../types.js';
-
-function extractTextFromAdf(node: AtlassianDocument | null): string | null {
-    if (!node) return null;
-    function walk(n: { type?: string; text?: string; content?: (typeof n)[] }): string {
-        if (n.type === 'text' && typeof n.text === 'string') return n.text;
-        if (Array.isArray(n.content)) return n.content.map(walk).join('');
-        return '';
-    }
-    const text = walk(node);
-    return text.length > 0 ? text : null;
-}
+import type { JiraIssueResponse } from '../types.js';
+import { extractTextFromAdf } from '../helpers/extract-text-from-adf.js';
 
 function mapStatus(statusCategoryKey: string): StandardTask['status'] {
     switch (statusCategoryKey) {

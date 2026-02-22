@@ -34,4 +34,5 @@ export const issueFields = `
     projectMilestone {
         id
     }
+    url
 `;

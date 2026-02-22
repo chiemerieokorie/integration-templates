@@ -2,7 +2,6 @@ import type { Project } from '../models/index.js';
 import type { StandardProject } from '../models/index.js';
 
 export function toStandardProject(project: Project, createdAt?: string, updatedAt?: string): StandardProject {
-    const now = new Date().toISOString();
     return {
         id: project.id,
         name: project.name,
@@ -18,7 +17,7 @@ export function toStandardProject(project: Project, createdAt?: string, updatedA
             projectTypeKey: project.projectTypeKey,
             apiUrl: project.url
         },
-        createdAt: createdAt ?? now,
-        updatedAt: updatedAt ?? now
+        createdAt: createdAt ?? null,
+        updatedAt: updatedAt ?? null
     };
 }

@@ -11,8 +11,8 @@ export const StandardMilestone = z.object({
     completedAt: z.string().nullable(),
     progress: z.number().nullable(),
     providerSpecific: z.object({}).catchall(z.any()),
-    createdAt: z.string(),
-    updatedAt: z.string()
+    createdAt: z.string().nullable(),
+    updatedAt: z.string().nullable()
 });
 
 export type StandardMilestone = z.infer<typeof StandardMilestone>;

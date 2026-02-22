@@ -2,8 +2,6 @@
 
 This document defines the unified team model used across project management integrations (Linear, Asana, Jira, GitHub). A "team" is the top-level organizational container — the group that owns projects and tasks. Different providers use different names: Linear calls them **teams**, Asana calls them **workspaces**, Jira implicitly groups work under an **organization/site**, and GitHub uses **organizations**.
 
-Schema.org basis: [schema:Organization](https://schema.org/Organization).
-
 ## Standardized Team Model
 
 ```typescript

@@ -11,7 +11,7 @@ export function toStandardTask(task: AsanaTask, projectId: string | null): Stand
         assigneeId: task.assignee?.gid ?? null,
         creatorId: task.created_by?.gid ?? null,
         projectId,
-        labels: task.tags ?? [],
+        labels: task.tags?.map((t) => t.name) ?? [],
         dueDate: task.due_on ? new Date(task.due_on).toISOString() : null,
         url: task.permalink_url,
         providerSpecific: {

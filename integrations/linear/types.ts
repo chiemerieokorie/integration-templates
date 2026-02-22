@@ -43,6 +43,7 @@ export interface LinearIssueResponse {
     projectMilestone: {
         id: string;
     } | null;
+    url?: string;
 }
 
 export interface LinearFieldTypeResponse {

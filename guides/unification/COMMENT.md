@@ -8,8 +8,6 @@ This document defines the unified models for two task-adjacent entities: **comme
 
 A comment is a message posted by a user on a task/issue. All four providers support comments on issues/tasks, though not all are currently synced.
 
-Schema.org basis: [schema:Comment](https://schema.org/Comment).
-
 ### Model
 
 ```typescript
@@ -60,8 +58,6 @@ Asana's equivalent of comments is the **Story** (`resource_type: "story"`). Only
 ## StandardLabel
 
 A label (or tag) is a categorical marker applied to tasks. All four providers support labels in some form, though the richness varies significantly.
-
-Schema.org basis: [schema:DefinedTerm](https://schema.org/DefinedTerm) — a term defined within a particular context.
 
 ### Model
 

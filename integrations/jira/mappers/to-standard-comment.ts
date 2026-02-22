@@ -1,19 +1,11 @@
 import type { Comment } from '../models/index.js';
 import type { StandardComment } from '../models/index.js';
-
-function extractTextFromAdf(node: any): string {
-    if (!node) return '';
-    if (node.type === 'text' && typeof node.text === 'string') return node.text;
-    if (Array.isArray(node.content)) {
-        return node.content.map(extractTextFromAdf).join('');
-    }
-    return '';
-}
+import { extractTextFromAdf } from '../helpers/extract-text-from-adf.js';
 
 export function toStandardComment(comment: Comment, taskId: string): StandardComment {
     return {
         id: comment.id,
-        body: extractTextFromAdf(comment.body),
+        body: extractTextFromAdf(comment.body) ?? '',
         taskId,
         authorId: comment.author.accountId ?? null,
         parentId: null,

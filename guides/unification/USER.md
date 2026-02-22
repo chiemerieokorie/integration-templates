@@ -2,8 +2,6 @@
 
 This document defines the unified user/member model across project management integrations (Linear, Asana, Jira, GitHub). A "user" is any person who can be assigned tasks, mentioned in comments, or listed as a team member.
 
-Schema.org basis: [schema:Person](https://schema.org/Person).
-
 ## Standardized User Model
 
 ```typescript
