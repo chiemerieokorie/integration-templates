@@ -23,20 +23,7 @@ export type { GithubLabel as GithubLabelType } from './github-label.js';
 export { GithubUser } from './github-user.js';
 export type { GithubUser as GithubUserType } from './github-user.js';
 
-export { StandardTask } from './standard-task.js';
-export type { StandardTask as StandardTaskType } from './standard-task.js';
-
-export { StandardProject } from './standard-project.js';
-export type { StandardProject as StandardProjectType } from './standard-project.js';
-
-export { StandardUser } from './standard-user.js';
-export type { StandardUser as StandardUserType } from './standard-user.js';
-
-export { StandardMilestone } from './standard-milestone.js';
-export type { StandardMilestone as StandardMilestoneType } from './standard-milestone.js';
-
-export { StandardLabel } from './standard-label.js';
-export type { StandardLabel as StandardLabelType } from './standard-label.js';
+export * from '../../shared/models/index.js';
 
 import { GithubIssue, Issue, GithubIssueRepoInput } from './github-issue.js';
 import { GithubRepoFile } from './github-repo-file.js';
@@ -44,11 +31,7 @@ import { Repo, WriteFileInput, WriteFileOutput, GithubWriteFileActionResult, Git
 import { GithubMilestone } from './github-milestone.js';
 import { GithubLabel } from './github-label.js';
 import { GithubUser } from './github-user.js';
-import { StandardTask } from './standard-task.js';
-import { StandardProject } from './standard-project.js';
-import { StandardUser } from './standard-user.js';
-import { StandardMilestone } from './standard-milestone.js';
-import { StandardLabel } from './standard-label.js';
+import { StandardTask, StandardProject, StandardUser, StandardMilestone, StandardLabel } from '../../shared/models/index.js';
 
 export const models = {
     GithubIssue,
