@@ -26,6 +26,7 @@ import './anrok/actions/void-transaction.js';
 // -- Integration: asana
 import './asana/syncs/projects.js';
 import './asana/syncs/tasks.js';
+import './asana/syncs/unified-tasks.js';
 import './asana/syncs/users.js';
 import './asana/syncs/workspaces.js';
 import './asana/actions/create-task.js';
@@ -241,6 +242,7 @@ import './gem/actions/upload-resume.js';
 import './github/syncs/issues.js';
 import './github/syncs/issues-lite.js';
 import './github/syncs/list-files.js';
+import './github/syncs/unified-tasks.js';
 import './github/actions/list-repos.js';
 import './github/actions/write-file.js';
 
@@ -408,6 +410,7 @@ import './intercom/actions/whoami.js';
 import './jira/syncs/issue-types.js';
 import './jira/syncs/issues.js';
 import './jira/syncs/projects.js';
+import './jira/syncs/unified-tasks.js';
 import './jira/actions/create-issue.js';
 
 // -- Integration: jira-basic
@@ -467,6 +470,7 @@ import './linear/syncs/milestones.js';
 import './linear/syncs/projects.js';
 import './linear/syncs/roadmaps.js';
 import './linear/syncs/teams.js';
+import './linear/syncs/unified-tasks.js';
 import './linear/syncs/users.js';
 import './linear/actions/create-issue.js';
 import './linear/actions/fetch-fields.js';

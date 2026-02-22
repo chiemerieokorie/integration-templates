@@ -4,7 +4,11 @@ export * from './asana-tag.js';
 export * from './asana-task.js';
 export * from './asana-user.js';
 export * from './asana-workspace.js';
-export * from '../../shared/models/index.js';
+export * from './standard-label.js';
+export * from './standard-project.js';
+export * from './standard-task.js';
+export * from './standard-team.js';
+export * from './standard-user.js';
 
 import {
     Id,
@@ -26,7 +30,11 @@ import { AsanaTag } from './asana-tag.js';
 import { AsanaTask } from './asana-task.js';
 import { AsanaPhoto, AsanaUser } from './asana-user.js';
 import { AsanaWorkspace } from './asana-workspace.js';
-import { StandardLabel, StandardProject, StandardTask, StandardTeam, StandardUser } from '../../shared/models/index.js';
+import { StandardLabel } from './standard-label.js';
+import { StandardProject } from './standard-project.js';
+import { StandardTask } from './standard-task.js';
+import { StandardTeam } from './standard-team.js';
+import { StandardUser } from './standard-user.js';
 
 export const models = {
     Id,

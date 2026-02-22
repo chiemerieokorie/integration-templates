@@ -339,6 +339,26 @@ export interface Task {
   name: string | null;})[] | undefined;};
 };
 
+export interface SyncMetadata_asana_unifiedtasks {
+};
+
+export interface StandardTask {
+  id: string;
+  title: string;
+  description: string;
+  status: 'TODO' | 'IN_PROGRESS' | 'DONE' | 'CANCELLED';
+  priority: 'URGENT' | 'HIGH' | 'MEDIUM' | 'LOW' | 'NONE';
+  assigneeId: string;
+  creatorId: string;
+  projectId: string;
+  labels: string[];
+  dueDate: string;
+  url: string;
+  providerSpecific: {};
+  createdAt: string;
+  updatedAt: string;
+};
+
 export interface SyncMetadata_asana_users {
 };
 
@@ -4032,6 +4052,9 @@ export interface GithubRepoFile {
   last_modified_date: Date;
 };
 
+export interface SyncMetadata_github_unifiedtasks {
+};
+
 export type ActionInput_github_listrepos = void
 
 export interface ActionOutput_github_listrepos {
@@ -6857,6 +6880,13 @@ export interface Project {
   webUrl: string;
 };
 
+export interface SyncMetadata_jira_unifiedtasks {
+  projectIdsToSync: ({  id: string;})[];
+  cloudId?: string | undefined;
+  baseUrl?: string | undefined;
+  timeZone?: string | undefined;
+};
+
 export interface ActionInput_jira_createissue {
   summary: string;
   description?: string | undefined;
@@ -7850,6 +7880,9 @@ export interface LinearTeam {
   description: string | null;
   createdAt: string;
   updatedAt: string;
+};
+
+export interface SyncMetadata_linear_unifiedtasks {
 };
 
 export interface SyncMetadata_linear_users {

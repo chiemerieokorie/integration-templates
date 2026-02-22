@@ -1,3 +1,20 @@
+export interface StandardTask {
+  id: string;
+  title: string;
+  description: string;
+  status: 'TODO' | 'IN_PROGRESS' | 'DONE' | 'CANCELLED';
+  priority: 'URGENT' | 'HIGH' | 'MEDIUM' | 'LOW' | 'NONE';
+  assigneeId: string;
+  creatorId: string;
+  projectId: string;
+  labels: string[];
+  dueDate: string;
+  url: string;
+  providerSpecific: {};
+  createdAt: string;
+  updatedAt: string;
+};
+
 export interface SyncMetadata_linear_issues {
 };
 
@@ -66,6 +83,9 @@ export interface LinearTeam {
   description: string | null;
   createdAt: string;
   updatedAt: string;
+};
+
+export interface SyncMetadata_linear_unifiedtasks {
 };
 
 export interface SyncMetadata_linear_users {

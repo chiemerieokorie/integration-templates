@@ -232,6 +232,91 @@
       ],
       "additionalProperties": false
     },
+    "StandardTask": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "TODO",
+            "IN_PROGRESS",
+            "DONE",
+            "CANCELLED"
+          ]
+        },
+        "priority": {
+          "type": "string",
+          "enum": [
+            "URGENT",
+            "HIGH",
+            "MEDIUM",
+            "LOW",
+            "NONE"
+          ]
+        },
+        "assigneeId": {
+          "type": "string"
+        },
+        "creatorId": {
+          "type": "string"
+        },
+        "projectId": {
+          "type": "string"
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dueDate": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "providerSpecific": {
+          "type": "object",
+          "additionalProperties": false
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "status",
+        "priority",
+        "assigneeId",
+        "creatorId",
+        "projectId",
+        "labels",
+        "dueDate",
+        "url",
+        "providerSpecific",
+        "createdAt",
+        "updatedAt"
+      ],
+      "additionalProperties": false
+    },
+    "SyncMetadata_github_unifiedtasks": {
+      "type": "object",
+      "additionalProperties": false
+    },
     "ActionInput_github_listrepos": {
       "type": "null"
     },

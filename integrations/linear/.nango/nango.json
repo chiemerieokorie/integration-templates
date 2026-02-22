@@ -223,33 +223,6 @@
       },
       {
         "type": "sync",
-        "description": "Fetches a list of users from Linear",
-        "auto_start": true,
-        "endpoints": [
-          {
-            "method": "GET",
-            "path": "/users",
-            "group": "Users"
-          }
-        ],
-        "input": "SyncMetadata_linear_users",
-        "name": "users",
-        "output": [
-          "LinearUser"
-        ],
-        "runs": "every 5min",
-        "scopes": [],
-        "sync_type": "incremental",
-        "track_deletes": false,
-        "usedModels": [
-          "LinearUser",
-          "SyncMetadata_linear_users"
-        ],
-        "version": "2.0.0",
-        "webhookSubscriptions": []
-      },
-      {
-        "type": "sync",
         "description": "Fetches issues from Linear and maps them to the standard task model",
         "auto_start": true,
         "endpoints": [
@@ -273,6 +246,33 @@
           "SyncMetadata_linear_unifiedtasks"
         ],
         "version": "1.0.0",
+        "webhookSubscriptions": []
+      },
+      {
+        "type": "sync",
+        "description": "Fetches a list of users from Linear",
+        "auto_start": true,
+        "endpoints": [
+          {
+            "method": "GET",
+            "path": "/users",
+            "group": "Users"
+          }
+        ],
+        "input": "SyncMetadata_linear_users",
+        "name": "users",
+        "output": [
+          "LinearUser"
+        ],
+        "runs": "every 5min",
+        "scopes": [],
+        "sync_type": "incremental",
+        "track_deletes": false,
+        "usedModels": [
+          "LinearUser",
+          "SyncMetadata_linear_users"
+        ],
+        "version": "2.0.0",
         "webhookSubscriptions": []
       }
     ],
