@@ -1,3 +1,20 @@
+export interface StandardTask {
+  id: string;
+  title: string;
+  description: string;
+  status: 'TODO' | 'IN_PROGRESS' | 'DONE' | 'CANCELLED';
+  priority: 'URGENT' | 'HIGH' | 'MEDIUM' | 'LOW' | 'NONE';
+  assigneeId: string;
+  creatorId: string;
+  projectId: string;
+  labels: string[];
+  dueDate: string;
+  url: string;
+  providerSpecific: {};
+  createdAt: string;
+  updatedAt: string;
+};
+
 export interface Issue {
   id: string;
   createdAt: string;
@@ -58,6 +75,13 @@ export interface Project {
   url: string;
   projectTypeKey: string;
   webUrl: string;
+};
+
+export interface SyncMetadata_jira_unifiedtasks {
+  projectIdsToSync: ({  id: string;})[];
+  cloudId?: string | undefined;
+  baseUrl?: string | undefined;
+  timeZone?: string | undefined;
 };
 
 export interface ActionInput_jira_createissue {
