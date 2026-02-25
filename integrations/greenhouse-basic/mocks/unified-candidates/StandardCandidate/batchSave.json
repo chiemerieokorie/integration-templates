@@ -1,0 +1,61 @@
+[
+    {
+        "id": "98765",
+        "firstName": "Fiona",
+        "lastName": "Murphy",
+        "emails": [
+            { "value": "fiona.murphy@example.com", "type": "personal", "isPrimary": true }
+        ],
+        "phoneNumbers": [
+            { "value": "+1-555-0301", "type": "mobile" }
+        ],
+        "company": "Green Solutions",
+        "title": "Environmental Engineer",
+        "location": null,
+        "applicationIds": ["12001", "12002"],
+        "tags": ["engineering", "sustainability"],
+        "resumeUrl": null,
+        "profileUrl": null,
+        "source": null,
+        "socialLinks": [
+            { "type": "url", "url": "https://linkedin.com/in/fionamurphy" }
+        ],
+        "providerSpecific": {
+            "photoUrl": "https://photos.greenhouse.io/candidates/98765.jpg",
+            "recruiter": {
+                "id": "1001",
+                "first_name": "Jane",
+                "last_name": "Recruiter",
+                "name": "Jane Recruiter"
+            },
+            "coordinator": null
+        },
+        "createdAt": "2024-02-01T09:00:00.000Z",
+        "updatedAt": "2024-06-10T11:00:00.000Z"
+    },
+    {
+        "id": "98766",
+        "firstName": "George",
+        "lastName": "Martinez",
+        "emails": [
+            { "value": "george.martinez@example.com", "type": "personal", "isPrimary": false }
+        ],
+        "phoneNumbers": [],
+        "company": "BuildCo",
+        "title": "Project Manager",
+        "location": null,
+        "applicationIds": ["12003"],
+        "tags": [],
+        "resumeUrl": null,
+        "profileUrl": null,
+        "source": null,
+        "socialLinks": [],
+        "providerSpecific": {
+            "photoUrl": null,
+            "recruiter": null,
+            "coordinator": null
+        },
+        "createdAt": "2024-03-15T14:00:00.000Z",
+        "updatedAt": "2024-05-20T10:30:00.000Z"
+    }
+]

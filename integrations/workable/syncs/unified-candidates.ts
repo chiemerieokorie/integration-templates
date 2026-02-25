@@ -1,7 +1,6 @@
 import { createSync } from 'nango';
 import { StandardCandidate } from '../../shared/models/ats/standard-candidate.js';
 import { toStandardCandidate } from '../mappers/to-standard-candidate.js';
-import { z } from 'zod';
 
 const sync = createSync({
     description: 'Fetches candidates from Workable and maps them to the standard ATS candidate model',
@@ -24,14 +23,12 @@ const sync = createSync({
         StandardCandidate: StandardCandidate
     },
 
-    metadata: z.object({}),
-
     exec: async (nango) => {
         for await (const batch of nango.paginate({
             // https://workable.readme.io/reference/job-candidates-index
             endpoint: '/spi/v3/candidates',
             params: {
-                ...(nango.lastSyncDate && { created_after: nango.lastSyncDate.toISOString() })
+                ...(nango.lastSyncDate && { updated_after: nango.lastSyncDate.toISOString() })
             },
             paginate: {
                 type: 'link',

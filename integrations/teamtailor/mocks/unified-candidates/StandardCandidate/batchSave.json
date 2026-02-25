@@ -1,0 +1,54 @@
+[
+    {
+        "id": "tt-cand-001",
+        "firstName": "Laura",
+        "lastName": "Andersen",
+        "emails": [
+            { "value": "laura.andersen@example.com", "type": null, "isPrimary": true }
+        ],
+        "phoneNumbers": [
+            { "value": "+46-70-000-0101", "type": null }
+        ],
+        "company": null,
+        "title": null,
+        "location": null,
+        "applicationIds": [],
+        "tags": [],
+        "resumeUrl": "https://teamtailor-production.s3.amazonaws.com/resumes/tt-cand-001.pdf",
+        "profileUrl": null,
+        "source": "sourced",
+        "socialLinks": [
+            { "type": "linkedin", "url": "https://linkedin.com/in/lauraandersen" }
+        ],
+        "providerSpecific": {
+            "pictureUrl": "https://teamtailor-production.s3.amazonaws.com/pictures/tt-cand-001.jpg",
+            "type": "candidates"
+        },
+        "createdAt": "2024-03-10T08:00:00.000Z",
+        "updatedAt": "2024-06-05T14:00:00.000Z"
+    },
+    {
+        "id": "tt-cand-002",
+        "firstName": "Marcus",
+        "lastName": "Johansson",
+        "emails": [
+            { "value": "marcus.johansson@example.com", "type": null, "isPrimary": true }
+        ],
+        "phoneNumbers": [],
+        "company": null,
+        "title": null,
+        "location": null,
+        "applicationIds": [],
+        "tags": [],
+        "resumeUrl": null,
+        "profileUrl": null,
+        "source": null,
+        "socialLinks": [],
+        "providerSpecific": {
+            "pictureUrl": null,
+            "type": "candidates"
+        },
+        "createdAt": "2024-04-22T10:30:00.000Z",
+        "updatedAt": "2024-06-18T09:00:00.000Z"
+    }
+]

@@ -1,7 +1,6 @@
 import { createSync } from 'nango';
 import { StandardCandidate } from '../../shared/models/ats/standard-candidate.js';
 import { toStandardCandidate } from '../mappers/to-standard-candidate.js';
-import { z } from 'zod';
 
 const sync = createSync({
     description: 'Fetches candidates from Greenhouse and maps them to the standard ATS candidate model',
@@ -22,14 +21,12 @@ const sync = createSync({
         StandardCandidate: StandardCandidate
     },
 
-    metadata: z.object({}),
-
     exec: async (nango) => {
         for await (const batch of nango.paginate({
             // https://developers.greenhouse.io/harvest.html#get-list-candidates
             endpoint: '/v1/candidates',
             params: {
-                ...(nango.lastSyncDate && { created_after: nango.lastSyncDate.toISOString() })
+                ...(nango.lastSyncDate && { updated_after: nango.lastSyncDate.toISOString() })
             },
             paginate: {
                 type: 'link',

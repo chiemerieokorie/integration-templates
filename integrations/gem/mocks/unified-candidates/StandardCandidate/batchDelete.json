@@ -1,0 +1,25 @@
+[
+    {
+        "id": "cand-gem-deleted-001",
+        "firstName": "Former",
+        "lastName": "Candidate",
+        "emails": [],
+        "phoneNumbers": [],
+        "company": null,
+        "title": null,
+        "location": null,
+        "applicationIds": [],
+        "tags": [],
+        "resumeUrl": null,
+        "profileUrl": null,
+        "source": null,
+        "socialLinks": [],
+        "providerSpecific": {
+            "isPrivate": false,
+            "educations": [],
+            "employments": []
+        },
+        "createdAt": "2023-11-01T10:00:00.000Z",
+        "updatedAt": "2024-04-01T00:00:00.000Z"
+    }
+]

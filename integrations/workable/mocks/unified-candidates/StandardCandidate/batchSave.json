@@ -1,0 +1,56 @@
+[
+    {
+        "id": "wrkbl-cand-001",
+        "firstName": "Natalie",
+        "lastName": "Brown",
+        "emails": [
+            { "value": "natalie.brown@example.com", "type": null, "isPrimary": true }
+        ],
+        "phoneNumbers": [
+            { "value": "+1-555-0601", "type": null }
+        ],
+        "company": null,
+        "title": "iOS Developer",
+        "location": "Chicago, IL",
+        "applicationIds": [],
+        "tags": [],
+        "resumeUrl": null,
+        "profileUrl": "https://www.workable.com/candidates/wrkbl-cand-001",
+        "source": null,
+        "socialLinks": [],
+        "providerSpecific": {
+            "stage": "Sourced",
+            "disqualified": false,
+            "disqualificationReason": "",
+            "jobShortcode": "IOS-001"
+        },
+        "createdAt": "2024-03-05T11:00:00.000Z",
+        "updatedAt": "2024-06-12T13:00:00.000Z"
+    },
+    {
+        "id": "wrkbl-cand-002",
+        "firstName": "Oliver",
+        "lastName": "Davis",
+        "emails": [
+            { "value": "oliver.davis@example.com", "type": null, "isPrimary": true }
+        ],
+        "phoneNumbers": [],
+        "company": null,
+        "title": "QA Engineer",
+        "location": "Boston, MA",
+        "applicationIds": [],
+        "tags": [],
+        "resumeUrl": null,
+        "profileUrl": "https://www.workable.com/candidates/wrkbl-cand-002",
+        "source": "sourced",
+        "socialLinks": [],
+        "providerSpecific": {
+            "stage": "Review",
+            "disqualified": false,
+            "disqualificationReason": "",
+            "jobShortcode": "QA-002"
+        },
+        "createdAt": "2024-04-18T16:00:00.000Z",
+        "updatedAt": "2024-06-01T10:00:00.000Z"
+    }
+]

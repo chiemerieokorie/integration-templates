@@ -1,0 +1,58 @@
+[
+    {
+        "id": "opp-lever-001",
+        "firstName": "Hannah",
+        "lastName": "Lee",
+        "emails": [
+            { "value": "hannah.lee@example.com", "type": null, "isPrimary": true }
+        ],
+        "phoneNumbers": [
+            { "value": "+1-555-0401", "type": "mobile" }
+        ],
+        "company": null,
+        "title": "Full Stack Developer",
+        "location": "San Francisco, CA",
+        "applicationIds": ["app-lever-001"],
+        "tags": ["engineering", "fullstack"],
+        "resumeUrl": "https://lever.co/resumes/opp-lever-001.pdf",
+        "profileUrl": "https://hire.lever.co/candidates/opp-lever-001",
+        "source": "LinkedIn",
+        "socialLinks": [
+            { "type": "url", "url": "https://github.com/hannahlee" }
+        ],
+        "providerSpecific": {
+            "stage": "Phone Screen",
+            "owner": "user-lever-001",
+            "confidentiality": "non-confidential",
+            "origin": "applied"
+        },
+        "createdAt": "2024-04-01T10:00:00.000Z",
+        "updatedAt": "2024-06-15T15:00:00.000Z"
+    },
+    {
+        "id": "opp-lever-002",
+        "firstName": "Ivan",
+        "lastName": "Petrov",
+        "emails": [
+            { "value": "ivan.petrov@example.com", "type": null, "isPrimary": true }
+        ],
+        "phoneNumbers": [],
+        "company": null,
+        "title": "DevOps Engineer",
+        "location": "Remote",
+        "applicationIds": ["app-lever-002"],
+        "tags": ["devops", "infrastructure"],
+        "resumeUrl": null,
+        "profileUrl": "https://hire.lever.co/candidates/opp-lever-002",
+        "source": "Referral",
+        "socialLinks": [],
+        "providerSpecific": {
+            "stage": "New Lead",
+            "owner": "user-lever-002",
+            "confidentiality": "non-confidential",
+            "origin": "sourced"
+        },
+        "createdAt": "2024-05-10T08:30:00.000Z",
+        "updatedAt": "2024-06-20T11:00:00.000Z"
+    }
+]

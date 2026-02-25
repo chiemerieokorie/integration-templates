@@ -1,0 +1,60 @@
+[
+    {
+        "id": "cand-ashby-001",
+        "firstName": "Alice",
+        "lastName": "Johnson",
+        "emails": [
+            { "value": "alice.johnson@example.com", "type": "personal", "isPrimary": true },
+            { "value": "alicejohnson@work.com", "type": "work", "isPrimary": false }
+        ],
+        "phoneNumbers": [
+            { "value": "+1-555-0101", "type": "mobile" }
+        ],
+        "company": "Acme Corp",
+        "title": "Senior Software Engineer",
+        "location": null,
+        "applicationIds": ["app-ashby-001", "app-ashby-002"],
+        "tags": ["backend", "senior"],
+        "resumeUrl": "https://storage.ashbyhq.com/resumes/cand-ashby-001.pdf",
+        "profileUrl": "https://app.ashbyhq.com/candidates/cand-ashby-001",
+        "source": "LinkedIn",
+        "socialLinks": [
+            { "type": "linkedin", "url": "https://linkedin.com/in/alicejohnson" }
+        ],
+        "providerSpecific": {
+            "school": "MIT",
+            "creditedToUser": {
+                "id": "user-ashby-001",
+                "firstName": "Bob",
+                "lastName": "Smith",
+                "email": "bob.smith@company.com"
+            }
+        },
+        "createdAt": "2024-03-15T10:00:00.000Z",
+        "updatedAt": null
+    },
+    {
+        "id": "cand-ashby-002",
+        "firstName": "Carlos",
+        "lastName": "Rivera",
+        "emails": [
+            { "value": "carlos.rivera@example.com", "type": "personal", "isPrimary": true }
+        ],
+        "phoneNumbers": [],
+        "company": null,
+        "title": "Product Manager",
+        "location": null,
+        "applicationIds": ["app-ashby-003"],
+        "tags": ["product", "leadership"],
+        "resumeUrl": null,
+        "profileUrl": "https://app.ashbyhq.com/candidates/cand-ashby-002",
+        "source": "Referral",
+        "socialLinks": [],
+        "providerSpecific": {
+            "school": "Stanford University",
+            "creditedToUser": null
+        },
+        "createdAt": "2024-04-20T14:30:00.000Z",
+        "updatedAt": null
+    }
+]

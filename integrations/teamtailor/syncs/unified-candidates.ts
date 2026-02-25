@@ -1,7 +1,6 @@
 import { createSync } from 'nango';
 import { StandardCandidate } from '../../shared/models/ats/standard-candidate.js';
 import { toStandardCandidate } from '../mappers/to-standard-candidate.js';
-import { z } from 'zod';
 
 const sync = createSync({
     description: 'Fetches candidates from TeamTailor and maps them to the standard ATS candidate model',
@@ -23,8 +22,6 @@ const sync = createSync({
     models: {
         StandardCandidate: StandardCandidate
     },
-
-    metadata: z.object({}),
 
     exec: async (nango) => {
         for await (const batch of nango.paginate({

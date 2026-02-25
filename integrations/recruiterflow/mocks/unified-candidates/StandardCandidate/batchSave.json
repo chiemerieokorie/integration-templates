@@ -1,0 +1,61 @@
+[
+    {
+        "id": "5001",
+        "firstName": "Julia",
+        "lastName": "Thompson",
+        "emails": [
+            { "value": "julia.thompson@example.com", "type": null, "isPrimary": true }
+        ],
+        "phoneNumbers": [
+            { "value": "+1-555-0501", "type": null }
+        ],
+        "company": "Innovate LLC",
+        "title": "Marketing Manager",
+        "location": "New York, NY",
+        "applicationIds": ["301", "302"],
+        "tags": [],
+        "resumeUrl": "https://recruiterflow.com/files/resume-5001.pdf",
+        "profileUrl": null,
+        "source": "LinkedIn",
+        "socialLinks": [
+            { "type": "linkedin", "url": "https://linkedin.com/in/juliathompson" },
+            { "type": "twitter", "url": "https://twitter.com/juliathompson" }
+        ],
+        "providerSpecific": {
+            "addedById": 99,
+            "addedByName": "Admin User",
+            "latestActivityTime": "2024-06-10T10:00:00.000Z",
+            "statusName": "Active"
+        },
+        "createdAt": "2024-01-20T10:00:00.000Z",
+        "updatedAt": "2024-06-10T10:00:00.000Z"
+    },
+    {
+        "id": "5002",
+        "firstName": "Kevin",
+        "lastName": "Park",
+        "emails": [
+            { "value": "kevin.park@example.com", "type": null, "isPrimary": true }
+        ],
+        "phoneNumbers": [],
+        "company": "DataDriven Co",
+        "title": "Machine Learning Engineer",
+        "location": "Austin, TX",
+        "applicationIds": ["303"],
+        "tags": [],
+        "resumeUrl": null,
+        "profileUrl": null,
+        "source": "Referral",
+        "socialLinks": [
+            { "type": "github", "url": "https://github.com/kevinpark" }
+        ],
+        "providerSpecific": {
+            "addedById": 99,
+            "addedByName": "Admin User",
+            "latestActivityTime": "2024-05-28T15:00:00.000Z",
+            "statusName": "Active"
+        },
+        "createdAt": "2024-02-14T09:00:00.000Z",
+        "updatedAt": "2024-05-28T15:00:00.000Z"
+    }
+]
