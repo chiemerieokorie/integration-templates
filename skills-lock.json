@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "nango-function-builder": {
+      "source": "nangohq/skills",
+      "sourceType": "github",
+      "computedHash": "d4af84a0046b45a189f085462aa93dc445538b054a40d8b2f832d825be09a5cb"
+    }
+  }
+}
