@@ -29,9 +29,37 @@ const sync = createSync({
     metadata: z.object({}),
 
     exec: async (nango) => {
-        const opportunities: any[] = [];
+        interface LeverOpportunity {
+            id: string;
+            postings: string[];
+        }
 
-        for await (const batch of nango.paginate<any>({
+        interface LeverInterviewer {
+            id: string;
+            name: string;
+            email: string;
+        }
+
+        interface LeverInterview {
+            id: string;
+            subject: string | null;
+            date: number | null;
+            duration: number | null;
+            location: string | null;
+            canceledAt: number | null;
+            interviewers: LeverInterviewer[];
+            panel: string;
+            note: string;
+            timezone: string;
+            feedbackTemplate: string;
+            feedbackForms: string[];
+            stage: string;
+            gcalEventUrl: string;
+        }
+
+        const opportunities: LeverOpportunity[] = [];
+
+        for await (const batch of nango.paginate<LeverOpportunity>({
             // https://hire.lever.co/developer/documentation#list-all-opportunities
             endpoint: '/v1/opportunities',
             paginate: {
@@ -62,8 +90,8 @@ const sync = createSync({
                 retries: 3
             };
 
-            for await (const batch of nango.paginate<any>(config)) {
-                const mapped: AtsInterview[] = batch.map((interview: any) => {
+            for await (const batch of nango.paginate<LeverInterview>(config)) {
+                const mapped: AtsInterview[] = batch.map((interview: LeverInterview) => {
                     const scheduledAt = interview.date ? new Date(interview.date).toISOString() : null;
 
                     let status: AtsInterview['status'] = 'scheduled';
@@ -73,7 +101,7 @@ const sync = createSync({
                         status = 'completed';
                     }
 
-                    const interviewers = (interview.interviewers ?? []).map((iv: any) => ({
+                    const interviewers = (interview.interviewers ?? []).map((iv: LeverInterviewer) => ({
                         id: iv.id ?? null,
                         name: iv.name ?? null,
                         email: iv.email ?? null
@@ -106,6 +134,8 @@ const sync = createSync({
                 }
             }
         }
+
+        await nango.deleteRecordsFromPreviousExecutions('AtsInterview');
     }
 });
 

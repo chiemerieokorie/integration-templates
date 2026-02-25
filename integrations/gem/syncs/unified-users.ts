@@ -24,7 +24,7 @@ const sync = createSync({
     metadata: z.object({}),
 
     exec: async (nango) => {
-        for await (const batch of nango.paginate<any>({
+        for await (const batch of nango.paginate<{ id: string; name: string; email: string }>({
             // https://api.gem.com/v0/reference#tag/Users/paths/~1v0~1users/get
             endpoint: '/v0/users',
             paginate: {
@@ -36,7 +36,7 @@ const sync = createSync({
             },
             retries: 3
         })) {
-            const mapped: AtsUser[] = batch.map((user: any) => ({
+            const mapped: AtsUser[] = batch.map((user: { id: string; name: string; email: string }) => ({
                 id: user.id,
                 name: user.name ?? null,
                 email: user.email ?? null,

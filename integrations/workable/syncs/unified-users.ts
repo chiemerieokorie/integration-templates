@@ -26,7 +26,7 @@ const sync = createSync({
     metadata: z.object({}),
 
     exec: async (nango) => {
-        for await (const batch of nango.paginate<any>({
+        for await (const batch of nango.paginate<{ id: string; name: string; headline: string; email: string; role: string }>({
             // https://workable.readme.io/reference/members
             endpoint: '/spi/v3/members',
             paginate: {
@@ -38,7 +38,7 @@ const sync = createSync({
             },
             retries: 3
         })) {
-            const mapped: AtsUser[] = batch.map((member: any) => ({
+            const mapped: AtsUser[] = batch.map((member: { id: string; name: string; headline: string; email: string; role: string }) => ({
                 id: member.id,
                 name: member.name ?? null,
                 email: member.email ?? null,
@@ -53,6 +53,8 @@ const sync = createSync({
                 await nango.batchSave(mapped, 'AtsUser');
             }
         }
+
+        await nango.deleteRecordsFromPreviousExecutions('AtsUser');
     }
 });
 

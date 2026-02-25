@@ -26,7 +26,19 @@ const sync = createSync({
     metadata: z.object({}),
 
     exec: async (nango) => {
-        for await (const batch of nango.paginate<any>({
+        interface LeverUser {
+            id: string;
+            name: string;
+            email: string;
+            accessRole: string;
+            deactivatedAt: number | null;
+            username: string;
+            jobTitle: string | null;
+            managerId: string | null;
+            createdAt: number;
+        }
+
+        for await (const batch of nango.paginate<LeverUser>({
             // https://hire.lever.co/developer/documentation#list-all-users
             endpoint: '/v1/users',
             paginate: {
@@ -39,7 +51,7 @@ const sync = createSync({
             },
             retries: 3
         })) {
-            const mapped: AtsUser[] = batch.map((user: any) => ({
+            const mapped: AtsUser[] = batch.map((user: LeverUser) => ({
                 id: user.id,
                 name: user.name ?? null,
                 email: user.email ?? null,
