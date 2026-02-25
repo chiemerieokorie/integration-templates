@@ -48,6 +48,8 @@ import './ashby/actions/create-application.js';
 import './ashby/actions/create-candidate.js';
 import './ashby/actions/create-note.js';
 import './ashby/actions/interview-stage.js';
+import './ashby/actions/unified-create-candidate.js';
+import './ashby/actions/unified-create-note.js';
 
 // -- Integration: attio
 import './attio/syncs/companies.js';
@@ -242,6 +244,8 @@ import './gem/actions/create-candidate.js';
 import './gem/actions/create-note.js';
 import './gem/actions/update-application.js';
 import './gem/actions/upload-resume.js';
+import './gem/actions/unified-create-candidate.js';
+import './gem/actions/unified-create-note.js';
 
 // -- Integration: github
 import './github/syncs/issues.js';
@@ -472,6 +476,8 @@ import './lever/actions/update-opportunity-sources.js';
 import './lever/actions/update-opportunity-stage.js';
 import './lever/actions/update-opportunity-tags.js';
 import './lever/actions/users.js';
+import './lever/actions/unified-create-candidate.js';
+import './lever/actions/unified-create-note.js';
 
 // -- Integration: linear
 import './linear/syncs/issues.js';
@@ -837,6 +843,8 @@ import './workable/syncs/jobs-questions.js';
 import './workable/syncs/members.js';
 import './workable/actions/create-candidate.js';
 import './workable/actions/create-comment.js';
+import './workable/actions/unified-create-candidate.js';
+import './workable/actions/unified-create-note.js';
 
 // -- Integration: workday
 import './workday/syncs/employees.js';
