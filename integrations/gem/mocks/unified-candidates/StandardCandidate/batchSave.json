@@ -1,0 +1,62 @@
+[
+    {
+        "id": "cand-gem-001",
+        "firstName": "Diana",
+        "lastName": "Chen",
+        "emails": [
+            { "value": "diana.chen@example.com", "type": "personal", "isPrimary": false }
+        ],
+        "phoneNumbers": [
+            { "value": "+1-555-0201", "type": "mobile" }
+        ],
+        "company": "TechStartup Inc",
+        "title": "UX Designer",
+        "location": null,
+        "applicationIds": ["app-gem-001"],
+        "tags": ["design", "ux"],
+        "resumeUrl": "https://storage.gem.com/attachments/resume-gem-001.pdf",
+        "profileUrl": null,
+        "source": "Job Board",
+        "socialLinks": [
+            { "type": "url", "url": "https://dribbble.com/dianachen" }
+        ],
+        "providerSpecific": {
+            "isPrivate": false,
+            "educations": [
+                { "school": "Carnegie Mellon", "degree": "BFA", "field": "Design", "start_year": 2015, "end_year": 2019 }
+            ],
+            "employments": [
+                { "company": "TechStartup Inc", "title": "UX Designer", "start_year": 2021, "end_year": null }
+            ]
+        },
+        "createdAt": "2024-01-10T08:00:00.000Z",
+        "updatedAt": "2024-06-01T12:00:00.000Z"
+    },
+    {
+        "id": "cand-gem-002",
+        "firstName": "Ethan",
+        "lastName": "Williams",
+        "emails": [
+            { "value": "ethan.williams@example.com", "type": "work", "isPrimary": false }
+        ],
+        "phoneNumbers": [],
+        "company": "Global Finance Ltd",
+        "title": "Data Analyst",
+        "location": null,
+        "applicationIds": ["app-gem-002", "app-gem-003"],
+        "tags": ["data", "analytics"],
+        "resumeUrl": null,
+        "profileUrl": null,
+        "source": null,
+        "socialLinks": [
+            { "type": "url", "url": "https://github.com/ethanwilliams" }
+        ],
+        "providerSpecific": {
+            "isPrivate": false,
+            "educations": [],
+            "employments": []
+        },
+        "createdAt": "2024-02-28T16:45:00.000Z",
+        "updatedAt": "2024-05-15T09:00:00.000Z"
+    }
+]

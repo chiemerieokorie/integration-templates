@@ -38,6 +38,8 @@ import './asana/actions/update-task.js';
 // -- Integration: ashby
 import './ashby/syncs/candidates.js';
 import './ashby/syncs/jobs.js';
+import './ashby/syncs/unified-candidates.js';
+import './ashby/syncs/unified-jobs.js';
 import './ashby/actions/application-change-source.js';
 import './ashby/actions/application-change-stage.js';
 import './ashby/actions/application-update.js';
@@ -46,6 +48,8 @@ import './ashby/actions/create-application.js';
 import './ashby/actions/create-candidate.js';
 import './ashby/actions/create-note.js';
 import './ashby/actions/interview-stage.js';
+import './ashby/actions/unified-create-candidate.js';
+import './ashby/actions/unified-create-note.js';
 
 // -- Integration: attio
 import './attio/syncs/companies.js';
@@ -228,15 +232,21 @@ import './front/actions/conversation.js';
 // -- Integration: gem
 import './gem/syncs/applications.js';
 import './gem/syncs/candidates.js';
+import './gem/syncs/unified-candidates.js';
+import './gem/syncs/unified-jobs.js';
+import './gem/syncs/unified-applications.js';
 import './gem/syncs/job-posts.js';
 import './gem/syncs/job-stages.js';
 import './gem/syncs/jobs.js';
 import './gem/syncs/locations.js';
 import './gem/syncs/users.js';
+import './gem/syncs/unified-users.js';
 import './gem/actions/create-candidate.js';
 import './gem/actions/create-note.js';
 import './gem/actions/update-application.js';
 import './gem/actions/upload-resume.js';
+import './gem/actions/unified-create-candidate.js';
+import './gem/actions/unified-create-note.js';
 
 // -- Integration: github
 import './github/syncs/issues.js';
@@ -333,6 +343,7 @@ import './grammarly/actions/delete-user.js';
 import './greenhouse-basic/syncs/applications.js';
 import './greenhouse-basic/syncs/candidates.js';
 import './greenhouse-basic/syncs/jobs.js';
+import './greenhouse-basic/syncs/unified-candidates.js';
 
 // -- Integration: gusto
 import './gusto/syncs/employees.js';
@@ -441,6 +452,9 @@ import './lattice-scim/actions/disable-user.js';
 
 // -- Integration: lever
 import './lever/syncs/opportunities.js';
+import './lever/syncs/unified-candidates.js';
+import './lever/syncs/unified-jobs.js';
+import './lever/syncs/unified-applications.js';
 import './lever/syncs/opportunities-applications.js';
 import './lever/syncs/opportunities-feedbacks.js';
 import './lever/syncs/opportunities-interviews.js';
@@ -449,6 +463,8 @@ import './lever/syncs/opportunities-offers.js';
 import './lever/syncs/postings.js';
 import './lever/syncs/postings-questions.js';
 import './lever/syncs/stages.js';
+import './lever/syncs/unified-users.js';
+import './lever/syncs/unified-interviews.js';
 import './lever/actions/apply-posting.js';
 import './lever/actions/create-note.js';
 import './lever/actions/create-opportunity.js';
@@ -463,6 +479,8 @@ import './lever/actions/update-opportunity-sources.js';
 import './lever/actions/update-opportunity-stage.js';
 import './lever/actions/update-opportunity-tags.js';
 import './lever/actions/users.js';
+import './lever/actions/unified-create-candidate.js';
+import './lever/actions/unified-create-note.js';
 
 // -- Integration: linear
 import './linear/syncs/issues.js';
@@ -663,6 +681,7 @@ import './recharge/actions/upsert-customers.js';
 // -- Integration: recruiterflow
 import './recruiterflow/syncs/candidate-activity-types.js';
 import './recruiterflow/syncs/candidates.js';
+import './recruiterflow/syncs/unified-candidates.js';
 import './recruiterflow/syncs/employment-types.js';
 import './recruiterflow/syncs/job-departments.js';
 import './recruiterflow/syncs/job-remote-statuses.js';
@@ -788,6 +807,7 @@ import './stripe-app/syncs/subscriptions.js';
 
 // -- Integration: teamtailor
 import './teamtailor/syncs/candidates.js';
+import './teamtailor/syncs/unified-candidates.js';
 
 // -- Integration: ukg-pro
 import './ukg-pro/syncs/unified-employees.js';
@@ -815,14 +835,20 @@ import './woocommerce/syncs/orders.js';
 
 // -- Integration: workable
 import './workable/syncs/candidates.js';
+import './workable/syncs/unified-candidates.js';
+import './workable/syncs/unified-jobs.js';
+import './workable/syncs/unified-applications.js';
 import './workable/syncs/candidates-activities.js';
 import './workable/syncs/candidates-offer.js';
 import './workable/syncs/jobs.js';
 import './workable/syncs/jobs-candidates.js';
 import './workable/syncs/jobs-questions.js';
 import './workable/syncs/members.js';
+import './workable/syncs/unified-users.js';
 import './workable/actions/create-candidate.js';
 import './workable/actions/create-comment.js';
+import './workable/actions/unified-create-candidate.js';
+import './workable/actions/unified-create-note.js';
 
 // -- Integration: workday
 import './workday/syncs/employees.js';
