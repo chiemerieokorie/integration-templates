@@ -7,3 +7,4 @@ export * from './standard-cycle.js';
 export * from './standard-comment.js';
 export * from './standard-label.js';
 export * from './ats/index.js';
+export * from './crm/index.js';
