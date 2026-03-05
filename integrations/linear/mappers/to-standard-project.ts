@@ -1,7 +1,16 @@
-import type { LinearProject } from '../models/index.js';
 import type { StandardProject } from '../models/index.js';
 
-export function toStandardProject(project: LinearProject): StandardProject {
+interface LinearProjectResponse {
+    id: string;
+    name: string;
+    description: string | null;
+    url: string;
+    teams?: { nodes: { id: string }[] };
+    createdAt: string;
+    updatedAt: string;
+}
+
+export function toStandardProject(project: LinearProjectResponse): StandardProject {
     return {
         id: project.id,
         name: project.name,
@@ -10,7 +19,7 @@ export function toStandardProject(project: LinearProject): StandardProject {
         startDate: null,
         targetDate: null,
         ownerId: null,
-        teamId: project.teamId,
+        teamId: project.teams?.nodes?.[0]?.id ?? null,
         url: project.url,
         providerSpecific: {},
         createdAt: project.createdAt,
