@@ -17,3 +17,14 @@ export interface GithubIssueRaw {
     updated_at: string;
     pull_request?: unknown;
 }
+
+export interface GithubTeamRaw {
+    id: number;
+    name: string;
+    slug: string;
+    description: string | null;
+    html_url: string;
+    organization: { id: number; login: string };
+    created_at: string;
+    updated_at: string;
+}

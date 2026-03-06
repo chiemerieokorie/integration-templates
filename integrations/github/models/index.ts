@@ -28,6 +28,7 @@ export * from './standard-project.js';
 export * from './standard-user.js';
 export * from './standard-milestone.js';
 export * from './standard-label.js';
+export * from './standard-team.js';
 
 import { GithubIssue, Issue, GithubIssueRepoInput } from './github-issue.js';
 import { GithubRepoFile } from './github-repo-file.js';
@@ -40,6 +41,7 @@ import { StandardProject } from './standard-project.js';
 import { StandardUser } from './standard-user.js';
 import { StandardMilestone } from './standard-milestone.js';
 import { StandardLabel } from './standard-label.js';
+import { StandardTeam } from './standard-team.js';
 
 export const models = {
     GithubIssue,
@@ -59,5 +61,6 @@ export const models = {
     StandardProject,
     StandardUser,
     StandardMilestone,
-    StandardLabel
+    StandardLabel,
+    StandardTeam
 };
