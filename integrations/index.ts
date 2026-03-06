@@ -1,6 +1,34 @@
 // -- Integration: adp
 import './adp/syncs/unified-employees.js';
 
+// -- Integration: close-crm
+import './close-crm/syncs/leads.js';
+import './close-crm/syncs/contacts.js';
+import './close-crm/syncs/opportunities.js';
+import './close-crm/actions/create-lead.js';
+import './close-crm/actions/update-lead.js';
+import './close-crm/actions/delete-lead.js';
+import './close-crm/actions/create-contact.js';
+import './close-crm/actions/update-contact.js';
+import './close-crm/actions/delete-contact.js';
+import './close-crm/actions/create-opportunity.js';
+import './close-crm/actions/update-opportunity.js';
+import './close-crm/actions/delete-opportunity.js';
+
+// -- Integration: twenty-crm
+import './twenty-crm/syncs/people.js';
+import './twenty-crm/syncs/companies.js';
+import './twenty-crm/syncs/opportunities.js';
+import './twenty-crm/actions/create-person.js';
+import './twenty-crm/actions/update-person.js';
+import './twenty-crm/actions/delete-person.js';
+import './twenty-crm/actions/create-company.js';
+import './twenty-crm/actions/update-company.js';
+import './twenty-crm/actions/delete-company.js';
+import './twenty-crm/actions/create-opportunity.js';
+import './twenty-crm/actions/update-opportunity.js';
+import './twenty-crm/actions/delete-opportunity.js';
+
 // -- Integration: aircall
 import './aircall/syncs/users.js';
 import './aircall/actions/create-user.js';
@@ -639,6 +667,15 @@ import './pipedrive/syncs/activities.js';
 import './pipedrive/syncs/deals.js';
 import './pipedrive/syncs/organizations.js';
 import './pipedrive/syncs/persons.js';
+import './pipedrive/actions/create-person.js';
+import './pipedrive/actions/update-person.js';
+import './pipedrive/actions/delete-person.js';
+import './pipedrive/actions/create-organization.js';
+import './pipedrive/actions/update-organization.js';
+import './pipedrive/actions/delete-organization.js';
+import './pipedrive/actions/create-deal.js';
+import './pipedrive/actions/update-deal.js';
+import './pipedrive/actions/delete-deal.js';
 
 // -- Integration: quickbooks
 import './quickbooks/syncs/accounts.js';
@@ -896,6 +933,15 @@ import './zendesk/actions/search-tickets.js';
 import './zoho-crm/syncs/accounts.js';
 import './zoho-crm/syncs/contacts.js';
 import './zoho-crm/syncs/deals.js';
+import './zoho-crm/actions/create-contact.js';
+import './zoho-crm/actions/update-contact.js';
+import './zoho-crm/actions/delete-contact.js';
+import './zoho-crm/actions/create-account.js';
+import './zoho-crm/actions/update-account.js';
+import './zoho-crm/actions/delete-account.js';
+import './zoho-crm/actions/create-deal.js';
+import './zoho-crm/actions/update-deal.js';
+import './zoho-crm/actions/delete-deal.js';
 
 // -- Integration: zoho-mail
 import './zoho-mail/syncs/emails.js';
